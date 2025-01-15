@@ -1519,6 +1519,10 @@ c_cpp_builtins (cpp_reader *pfile)
      format.  */
   if (ENABLE_DECIMAL_FLOAT && ENABLE_DECIMAL_BID_FORMAT)
     cpp_define (pfile, "__DECIMAL_BID_FORMAT__");
+
+  // @JC BEGIN here is the patch to gcc required for the coding challenge
+  cpp_define(pfile, "MY_NEW_MACRO");
+  // @JC END
 }
 
 /* Pass an object-like macro.  If it doesn't lie in the user's
